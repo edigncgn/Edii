@@ -1,0 +1,251 @@
+﻿/* Reset general */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #dff1ff, #ffffff);
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 1.8;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* Header – stil sticlă + gradient */
+header {
+  background: rgba(30, 58, 138, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0f2fe;
+  font-weight: 600;
+  padding: 10px 16px;
+  margin: 0 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Main container – efect de card */
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  animation: slideFade 0.8s ease-out;
+}
+
+/* Titluri */
+main h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  border-bottom: 2px solid #3b82f6;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+
+main h3 {
+  font-size: 1.5rem;
+  color: #1d4ed8;
+  margin-top: 30px;
+}
+
+/* Text */
+main p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 15px 0 25px 30px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  padding: 30px 20px;
+  color: #334155;
+  background: linear-gradient(to right, #dbeafe, #e0f2fe);
+  border-top: 4px solid #60a5fa;
+  border-radius: 16px;
+}
+
+/* Animație apariție secțiuni */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 4px;
+  }
+
+  main {
+    padding: 25px 20px;
+  }
+
+  img {
+    max-width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* Quiz container */
+.container {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #1e3a8a;
+}
+
+.card {
+  background: #f0f4ff;
+  border: 2px solid #c7d2fe;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.card label {
+  display: block;
+  margin: 6px 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.card button {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.card button:hover {
+  background-color: #2563eb;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #1d4ed8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === IMAGINI MAI MICI + EFECT WOW++ === */
+img {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+  will-change: transform, filter;
+  perspective: 1000px;
+}
+
+img:hover {
+  transform: scale(1.06) rotate3d(1, 1, 0, 6deg);
+  filter: brightness(1.2) contrast(1.2) saturate(1.3);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+}
